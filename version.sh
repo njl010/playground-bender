@@ -2,7 +2,7 @@
 
 set -e
 
-LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
+LAST_TAG_RAW=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
 LAST_TAG=${LAST_TAG_RAW#v}
 echo "Last tag: $LAST_TAG"
 
