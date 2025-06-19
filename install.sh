@@ -1,6 +1,6 @@
 #!/bin/bash
 
-go build .
+go build . 
 
 sudo mkdir -p /usr/local/bin
 
