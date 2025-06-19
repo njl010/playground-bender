@@ -1,6 +1,5 @@
 package docker
 
-
 import (
 	"context"
 	"encoding/json"
