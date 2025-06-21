@@ -21,7 +21,7 @@ elif echo "$COMMITS" | grep -qE "^patch:"; then
 else
   echo "No version bump keyword found. Skipping version tagging."
   exit 0
-fi
+fi 
 
 VERSION=${LAST_TAG#v}
 IFS='.' read -r MAJOR MINOR PATCH <<< "$VERSION"
