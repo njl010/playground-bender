@@ -12,7 +12,7 @@ echo "$COMMITS"
 
 BUMP="patch"
 
-if echo "$COMMITS" | grep -qE "major:"; then
+if echo "$COMMITS" | grep -qE "^major:"; then
   BUMP="major"
 elif echo "$COMMITS" | grep -qE "^minor:"; then
   BUMP="minor"
