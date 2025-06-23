@@ -19,7 +19,7 @@ elif echo "$COMMITS" | grep -qE "^minor:"; then
 elif echo "$COMMITS" | grep -qE "^patch:"; then
   BUMP="patch"
 else
-  echo "No version bump keyword found. Skipping version tagging."
+  echo "No version bump keyword found. Skipping version tagging." 
   exit 0
 fi 
 
