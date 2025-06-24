@@ -9,7 +9,7 @@ echo "Last tag: $LAST_TAG"
 COMMITS=$(git log ${LAST_TAG}..HEAD --pretty=format:"%s%n%b" 2>/dev/null || git log --pretty=format:"%s%n%b")
 echo "Commits since $LAST_TAG:"
 echo "$COMMITS"
-
+ 
 BUMP="patch"
 
 if echo "$COMMITS" | grep -qE "^major:"; then
