@@ -20,7 +20,7 @@ elif echo "$COMMITS" | grep -qE "^patch:"; then
   BUMP="patch"
 else
   echo "No version bump keyword found. Skipping version tagging." 
-  exit 0
+  exit 0 
 fi 
 
 VERSION=${LAST_TAG#v}
