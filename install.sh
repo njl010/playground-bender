@@ -28,6 +28,8 @@ echo "$service" | sudo tee /etc/systemd/system/bender.service > /dev/null
 sudo chown root:docker /var/run/docker.sock
 sudo chmod 0660 /var/run/docker.sock
 
+sudo systemctl daemon-reexec
+
 sudo systemctl daemon-reload
 
 sudo systemctl enable bender
