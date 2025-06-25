@@ -8,6 +8,8 @@ sudo cp ./bender /usr/local/bin/bender
 
 sudo chmod +x /usr/local/bin/bender
 
+sudo  chown root:root /usr/local/bin/bender
+
 service="[Unit]
 Description=Bender service
 After=network.target redis.service
@@ -27,7 +29,7 @@ echo "$service" | sudo tee /etc/systemd/system/bender.service > /dev/null
 
 sudo chown root:docker /var/run/docker.sock
 sudo chmod 0660 /var/run/docker.sock
-
+sudo systemctl stop bender || true 
 sudo systemctl daemon-reexec
 
 sudo systemctl daemon-reload
