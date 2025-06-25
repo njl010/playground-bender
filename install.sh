@@ -10,7 +10,7 @@ sudo chmod +x /usr/local/bin/bender
 
 service="[Unit]
 Description=Bender service
-After=network.target
+After=network.target redis.service
 
 [Service]
 Type=simple
