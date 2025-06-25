@@ -16,7 +16,7 @@ service="[Unit]
 Description=Bender service
 After=network.target redis.service
 
-[Service] 
+[Service]  
 Type=simple
 ExecStart=/usr/local/bin/bender
 Restart=on-failure
