@@ -17,7 +17,7 @@ Type=simple
 ExecStart=/usr/local/bin/bender
 Restart=on-failure
 User=$(whoami)
-WorkingDirectory=/home/$(whoami)
+WorkingDirectory=/usr/local/bin
 SupplementaryGroups=docker
 
 [Install]
