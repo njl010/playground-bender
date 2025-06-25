@@ -11,7 +11,7 @@ sudo cp ./bender /usr/local/bin/bender
 sudo chmod +x /usr/local/bin/bender
 
 sudo  chown root:root /usr/local/bin/bender
-
+ 
 service="[Unit]
 Description=Bender service
 After=network.target redis.service
