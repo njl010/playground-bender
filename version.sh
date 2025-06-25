@@ -6,7 +6,7 @@ LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "v0.0.0")
 
 echo "Last tag: $LAST_TAG"
 
-COMMITS=$(git log ${LAST_TAG}..HEAD --pretty=format:"%s%n%b" 2>/dev/null )
+COMMITS=$(git log ${LAST_TAG}..HEAD --pretty=format:"%s%n%b" 2>/dev/null || git log --pretty=format:"%s%n%b")
 echo "Commits since $LAST_TAG:"
 echo "$COMMITS"
   
