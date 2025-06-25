@@ -2,6 +2,8 @@
 
 go build . 
 
+sudo systemctl stop bender || true 
+
 sudo mkdir -p /usr/local/bin
 
 sudo cp ./bender /usr/local/bin/bender
@@ -29,7 +31,7 @@ echo "$service" | sudo tee /etc/systemd/system/bender.service > /dev/null
 
 sudo chown root:docker /var/run/docker.sock
 sudo chmod 0660 /var/run/docker.sock
-sudo systemctl stop bender || true 
+
 sudo systemctl daemon-reexec
 
 sudo systemctl daemon-reload
