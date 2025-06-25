@@ -14,7 +14,7 @@ import (
 var (        
 	ctx = context.Background()  
 	rdb *redis.Client
-)    
+)     
       
 func main() {
 	rdb = init_redis.InitRedis(ctx)
